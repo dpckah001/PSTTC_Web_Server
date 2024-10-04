@@ -1,96 +1,90 @@
 # PSTTC Web Server
 
-这是一个简单的基于 PowerShell 的 Web 服务器，用于演示如何创建和部署一个轻量级的 HTTP 服务器。该服务器可以监听指定端口上的请求，并返回指定的 HTML 文件。
+This is a simple HTTP server based on PowerShell, demonstrating how to create and deploy a lightweight web server. The server listens for requests on a specified port and returns a designated HTML file.
 
+## Features
 
-## 特性
+- Supports basic HTTP request handling.
+- Logging functionality.
+- Can be run as a Windows service.
 
-- 支持基本的 HTTP 请求处理。
-- 日志记录功能。
-- 可以作为 Windows 服务运行。
+## Installation
 
-## 特性
+### 1. Run the Installation Script
 
-- 支持基本的 HTTP 请求处理。
-- 日志记录功能。
-- 可以作为 Windows 服务运行。
-
-## 安装
-
-### 1. 运行安装脚本
-
-安装脚本 `install_psttc.ps1` 会将程序安装到 `C:\Program Files\PSTTC` 目录，并创建桌面和开始菜单的快捷方式。
+The installation script `install_psttc.ps1` will install the program into the `C:\Program Files\PSTTC` directory and create shortcuts on the desktop and in the Start Menu.
 
 ```powershell
 .\install_psttc.ps1
 ```
 
-## 使用
+## Usage
 
-### 启动服务器
+### Starting the Server
 
-#### 通过快捷方式启动
+#### Through Shortcut
 
-双击桌面上或开始菜单中的快捷方式即可启动服务器。
+Double-click the shortcut on your desktop or in the Start Menu to start the server.
 
-#### 通过命令行启动
+#### Through Command Line
 
 ```powershell
 .\psttc.exe [htmlFile]
 ```
 
-其中 `[htmlFile]` 是可选参数，默认为 `./www/index.html`。
+Where `[htmlFile]` is an optional parameter; the default is `./www/index.html`.
 
-### 查看帮助信息
+### Viewing Help Information
 
-运行 `-help` 参数以查看脚本的用法信息：
+Run the `-help` parameter to view the usage information:
 
 ```powershell
 .\psttc.exe -help
 ```
 
-### 配置选项
+### Configuration Options
 
-- **端口**：默认监听端口为 8001，可以通过修改源代码中的 `$port` 变量来更改。
-- **日志文件**：默认日志文件为 `access.log`，位于 `C:\Program Files\PSTTC` 目录下。
+- **Port**: The default listening port is 8001. You can change this by modifying the `$port` variable in the source code.
+- **Log File**: The default log file is `access.log`, located in the `C:\Program Files\PSTTC` directory.
 
-## 卸载
+## Uninstallation
 
-要卸载程序，请删除安装目录 `C:\Program Files\PSTTC` 以及桌面上和开始菜单中的快捷方式。
+To uninstall the program, delete the installation directory `C:\Program Files\PSTTC` along with the shortcuts on the desktop and in the Start Menu.
 
 ```powershell
 rmdir /s /q "C:\Program Files\PSTTC"
 ```
 
-## 服务管理
+## Service Management
 
-如果已将程序注册为 Windows 服务，可以使用以下命令管理服务：
+If the program has been registered as a Windows service, you can manage the service using the following commands:
 
-### 启动服务
+### Start the Service
 
 ```powershell
 sc start PSTTCWebServer
 ```
 
-### 停止服务
+### Stop the Service
 
 ```powershell
 sc stop PSTTCWebServer
 ```
 
-### 删除服务
+### Remove the Service
 
 ```powershell
 sc delete PSTTCWebServer
 ```
 
-## 支持
+## Support
 
-如果您在使用过程中遇到任何问题或有任何建议，请联系开发人员。
+If you encounter any issues or have any suggestions while using the program, please contact the development team.
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证发布。详情见 LICENSE 文件。
+This project is released under the MIT License. See the LICENSE file for details.
 
 ---
-*此文档由开发团队编写，如有更新，请以最新版为准。*
+*This document is written by the development team. Please refer to the latest version for updates.*
+
