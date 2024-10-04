@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PSTTC Web Server</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #333; }
+        p { line-height: 1.6; }
+        pre { background-color: #f8f8f8; padding: 10px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to PSTTC Web Server</h1>
+    <p>PSTTC (PowerShell Temporary Testing Console) is a simple web server implemented using PowerShell and the .NET Framework's <code>HttpListener</code> class. This server is designed for testing and educational purposes and is not intended for production use.</p>
+    
+    <h2>Features</h2>
+    <ul>
+        <li>Serves static files from the <code>www</code> directory.</li>
+        <li>Logs all access attempts to an <code>access.log</code> file.</li>
+        <li>Supports monitoring of file changes and automatic cache invalidation.</li>
+        <li>Easy to configure and extend.</li>
+    </ul>
+
+    <h2>Getting Started</h2>
+    <p>To get started with PSTTC Web Server:</p>
+    <ol>
+        <li>Create a new directory for your project.</li>
+        <li>Place your static files (e.g., HTML, CSS, JavaScript) in the <code>www</code> subdirectory.</li>
+        <li>Run the <code>psttc.ps1</code> script in PowerShell.</li>
+    </ol>
+
+    <h2>Configuration</h2>
+    <p>The server can be configured by editing the <code>psttc.ps1</code> script. You can change the port number, document root, and other settings as needed.</p>
+
+    <h2>Examples</h2>
+    <p>Here are some examples of how to modify the server configuration:</p>
+    <pre>
+<code>$port = 8080 # Change the port number
+$documentRoot = &quot;content&quot; # Change the document root
+$logFile = &quot;logs/access.log&quot; # Change the log file location</code>
+    </pre>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need support, please feel free to contact us at <a href="mailto:support@example.com">support@example.com</a>.</p>
+
+    <footer>
+        <p>&copy; 2024 PSTTC Web Server. All rights reserved.</p>
+    </footer>
+</body>
+</html>
